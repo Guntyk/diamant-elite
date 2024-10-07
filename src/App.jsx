@@ -1,10 +1,13 @@
-import { Header } from "components/Header";
+import { Header } from 'components/Header';
+import { Hero } from 'pages/Main/blocks/Hero';
 
 export default function App() {
   return (
     <>
       <Header />
-      <main></main>
+      <main>
+        <Hero />
+      </main>
     </>
   );
 }

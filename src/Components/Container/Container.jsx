@@ -1,5 +1,6 @@
-import styles from "components/Container/Container.scss";
+import cn from 'classnames';
+import styles from 'components/Container/Container.scss';
 
-export const Container = ({ children }) => {
-  return <div className={styles.container}>{children}</div>;
+export const Container = ({ children, className }) => {
+  return <div className={cn(styles.container, className)}>{children}</div>;
 };

@@ -65,7 +65,7 @@
       margin-left: 40px;
 
       &::before {
-        content: url(../icons/phone.svg);
+        content: url(assets/icons/phone.svg);
       }
 
       &:nth-child(1) {
@@ -76,14 +76,14 @@
           position: absolute;
           top: 12px;
           left: -10px;
-          content: url(../icons/telegram.svg);
+          content: url(assets/icons/social/telegram.svg);
         }
 
         &::after {
           position: absolute;
           top: 12px;
           left: -35px;
-          content: url(../icons/viber.svg);
+          content: url(assets/icons/social/viber.svg);
         }
       }
     }
