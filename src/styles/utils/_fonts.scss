@@ -1,0 +1,23 @@
+@font-face {
+  font-family: $font;
+  src: url("assets/fonts/Monserrat-Regular.ttf");
+  font-weight: map-get($fontWeights, "regular");
+}
+
+@font-face {
+  font-family: $font;
+  src: url("assets/fonts/Monserrat-Medium.ttf");
+  font-weight: map-get($fontWeights, "medium");
+}
+
+@font-face {
+  font-family: $font;
+  src: url("assets/fonts/Monserrat-SemiBold.ttf");
+  font-weight: map-get($fontWeights, "semiBold");
+}
+
+@font-face {
+  font-family: $font;
+  src: url("assets/fonts/Monserrat-Bold.ttf");
+  font-weight: map-get($fontWeights, "bold");
+}

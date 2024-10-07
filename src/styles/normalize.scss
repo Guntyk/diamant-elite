@@ -1,0 +1,44 @@
+html {
+  font-size: $mainFontSize;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  color: $text1;
+  background: $background1;
+  font-family: $bodyFont, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: map-get($fontWeights, 'regular');
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 1.6rem;
+    border: 0.05rem solid $background2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: $background2;
+  }
+}
+
+* {
+  &::-moz-selection {
+    color: $text1;
+    background: $secondary2;
+  }
+  &::selection {
+    color: $text1;
+    background: $secondary2;
+  }
+}
+
+textarea {
+  font-family: inherit;
+  resize: vertical;
+  min-height: 5.6rem;
+  height: 5.6rem;
+}

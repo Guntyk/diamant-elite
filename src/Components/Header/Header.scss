@@ -1,0 +1,91 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  max-height: 80px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgb(190, 190, 190);
+
+  img {
+    margin-top: 3px;
+    height: 70px;
+  }
+
+  &Row {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &Content {
+    &:hover,
+    &:focus {
+      .headerCalls {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(10px) translateY(-40px);
+      }
+    }
+  }
+
+  &Calls {
+    position: absolute;
+    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    min-height: auto;
+    width: 251px;
+    background-color: #fff;
+    box-shadow: 0px 4px 32px 0px #0000001f;
+    border-radius: 18px;
+    transform: translateX(10px) translateY(-50px);
+    z-index: -5;
+  }
+
+  &Wrapper {
+    position: relative;
+    margin-top: 40px;
+
+    a {
+      padding-left: 20px;
+      color: #223344;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 50px;
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+
+    li {
+      list-style-type: none;
+      margin-left: 40px;
+
+      &::before {
+        content: url(../icons/phone.svg);
+      }
+
+      &:nth-child(1) {
+        position: relative;
+        margin-left: 24%;
+
+        &::before {
+          position: absolute;
+          top: 12px;
+          left: -10px;
+          content: url(../icons/telegram.svg);
+        }
+
+        &::after {
+          position: absolute;
+          top: 12px;
+          left: -35px;
+          content: url(../icons/viber.svg);
+        }
+      }
+    }
+  }
+}
