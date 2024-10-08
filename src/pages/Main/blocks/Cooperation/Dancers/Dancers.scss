@@ -1,0 +1,121 @@
+.dancer {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    margin: 15px;
+    width: 540px;
+    height: 299px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 18px;
+    overflow: hidden;
+
+    &:nth-child(1) {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url(assets/images/dancers/kids.webp) no-repeat 50% / cover border-box;
+    }
+    &:nth-child(2) {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url(assets/images/dancers/online.webp) no-repeat 50% / cover border-box;
+    }
+    &:nth-child(3) {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url(assets/images/dancers/proamkids.jpg) no-repeat 50% 40% / cover;
+    }
+    &:nth-child(4) {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url(assets/images/pages/proam-ad/proam-ad2.jpg) no-repeat 50% / cover;
+    }
+    &:nth-child(5) {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url(assets/images/dancers/ballroom.jpg) no-repeat 50% 55% / cover border-box;
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      width: 1110px;
+      height: 300px;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+
+      .dancer__arrow {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 41px;
+    left: 397px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.3s;
+    &_big {
+      left: 586px;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .dancer__item:last-child {
+    margin: 15px 0;
+    width: 540px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dancer__item:last-child {
+    width: 510px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dancer h2 {
+    position: absolute;
+    bottom: 17px;
+    left: 10px;
+  }
+  .dancer__content {
+    padding-top: 20px;
+  }
+  .dancer__item {
+    margin: 4px;
+    width: 141px;
+    height: 141px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .dancer__item:last-child {
+    margin: 4px;
+    width: 290px;
+    height: 141px;
+  }
+}
+
+@media (max-width: 320px) {
+  .dancer__item {
+    width: 100%;
+  }
+}

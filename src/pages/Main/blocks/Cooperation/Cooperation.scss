@@ -1,0 +1,52 @@
+.cooperation {
+  background-color: #f8f8f8;
+}
+
+.selector {
+  padding: 100px 0 50px 0;
+  color: #3b2e85;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.item {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.active {
+    font-weight: 600;
+    text-decoration: underline;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .selector {
+    padding: 50px 0 40px 0;
+    overflow-x: scroll;
+  }
+  .list {
+    justify-content: start;
+  }
+  .item {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .selector {
+    font-size: 16px;
+  }
+}
