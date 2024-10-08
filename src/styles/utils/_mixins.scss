@@ -1,4 +1,25 @@
 @mixin container($maxWidth: 132rem) {
   margin: $centeredMargin;
   max-width: 132rem;
+
+  @media (max-width: 139.998rem) {
+    max-width: 114rem;
+  }
+
+  @media (max-width: 119.998rem) {
+    max-width: 96rem;
+  }
+
+  @media (max-width: 99.198rem) {
+    max-width: 72rem;
+  }
+
+  @media (max-width: 76.798rem) {
+    max-width: 54rem;
+  }
+
+  @media (max-width: 575.98px) {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
 }

@@ -1,11 +1,11 @@
 .hero {
-  padding-top: 30px;
+  padding-top: 3rem;
   color: #223344;
 
   img {
-    max-width: 527px;
+    max-width: 52.7rem;
     max-height: auto;
-    border-radius: 18px;
+    border-radius: 1.8rem;
   }
 }
 
@@ -16,18 +16,90 @@
 }
 
 .wrapper {
-  width: 616px;
+  width: 61.6rem;
 }
 
 .title {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 4.8rem;
+  line-height: 6rem;
 }
 
 .subtitle {
-  margin-top: 24px;
+  margin-top: 2.4rem;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+@media (max-width: 99.198rem) {
+  .hero img {
+    width: 31rem;
+    height: auto;
+  }
+
+  .wrapper {
+    margin-right: 5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    line-height: 3.9rem;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+}
+
+@media (max-width: 76.798rem) {
+  .hero img {
+    width: 25rem;
+    height: auto;
+  }
+  .wrapper {
+    top: 13.5rem;
+    width: 25rem;
+    margin: 5rem 5rem 0 0;
+  }
+  .title {
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+  }
+  .subtitle {
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+  }
+}
+
+@media (max-width: 57.598rem) {
+  .hero {
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+  .wrapper {
+    width: 38.3rem;
+    height: auto;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+  }
+  .align {
+    flex-wrap: wrap;
+  }
+  .title {
+    font-size: 3rem;
+    line-height: 2.9rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+  .button__mt30 {
+    margin-top: 2.3rem;
+  }
 }

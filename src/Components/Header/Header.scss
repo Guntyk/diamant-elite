@@ -89,3 +89,12 @@
     }
   }
 }
+
+@media (max-width: 99.198rem) {
+  .headerCalls {
+    width: 230px;
+  }
+  .headerWrapper > li {
+    margin-left: 25px;
+  }
+}
