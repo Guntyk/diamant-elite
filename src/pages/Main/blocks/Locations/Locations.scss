@@ -1,0 +1,74 @@
+.locations {
+  min-height: 403px;
+  padding: 50px 0;
+  color: #223344;
+  background-color: #f8f8f8;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.list {
+  list-style-type: disc;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 20px 0 0 20px;
+  cursor: pointer;
+}
+
+.mark:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1199.98px) {
+  .map {
+    width: 600px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .wrapper {
+    padding-top: 40px;
+    flex-wrap: wrap;
+  }
+  .listBlock {
+    margin: 0 auto 30px auto;
+    text-align: center;
+  }
+  .map {
+    margin: 0 auto;
+  }
+  .list {
+    list-style-type: none;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .listBlock {
+    margin: 0 auto 30px auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .title {
+    font-size: 30px;
+  }
+  .list {
+    margin-top: 5px;
+  }
+  .listBlock {
+    margin: 0 auto 30px auto;
+    text-align: center;
+  }
+}
