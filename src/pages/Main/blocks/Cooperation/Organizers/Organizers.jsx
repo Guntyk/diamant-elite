@@ -29,7 +29,7 @@ export const Organizers = () => (
             rel='nofollow noopener noreferrer'
             className={cn(styles.organizer__address, styles.href)}
           >
-            (вул. Лариси Руденко, 6a)
+            (вул. Лариси Руденко, 6А)
           </a>
         </div>
       </div>

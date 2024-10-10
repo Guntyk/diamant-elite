@@ -1,3 +1,4 @@
+import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
 import { Cooperation } from 'pages/Main/blocks/Cooperation';
 import { Advantages } from 'pages/Main/blocks/Advantages';
@@ -16,6 +17,7 @@ export default function App() {
         <Locations />
         <Feedback />
       </main>
+      <Footer />
     </>
   );
 }

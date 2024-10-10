@@ -26,6 +26,7 @@ export const Cooperation = () => {
               <li
                 className={cn(styles.item, { [styles.active]: id === openedSectionID })}
                 onClick={() => setOpenedSectionID(id)}
+                key={id}
               >
                 {title}
               </li>
