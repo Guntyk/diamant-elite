@@ -9,6 +9,7 @@
 
   img {
     margin-top: 3px;
+    width: 18.5rem;
     height: 70px;
   }
 
@@ -90,11 +91,31 @@
   }
 }
 
-@media (max-width: 99.198rem) {
+@media (max-width: 991.98px) {
   .headerCalls {
     width: 230px;
   }
   .headerWrapper > li {
     margin-left: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .headerRow > a > img {
+    width: 200px;
+    height: 60px;
+    margin: 5px 0;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .headerCalls {
+    display: none;
+  }
+  .header {
+    width: 100%;
   }
 }
