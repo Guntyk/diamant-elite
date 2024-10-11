@@ -1,0 +1,119 @@
+.btn {
+  width: 271px;
+  height: 52px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &__mt30 {
+    margin-top: 30px;
+  }
+
+  &__mt20 {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &__wrapper {
+    a {
+      padding-left: 10px;
+      color: #223344;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 50px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    li {
+      &::before {
+        content: url(assets/icons/phone.svg);
+      }
+      &:first-child {
+        position: relative;
+        margin-left: 18%;
+        font-size: 17px;
+        &::before {
+          position: absolute;
+          top: 13px;
+          left: -40px;
+          content: url(assets/icons/social/telegram.svg);
+        }
+        &::after {
+          position: absolute;
+          top: 13px;
+          left: -63px;
+          content: url(assets/icons/social/viber.svg);
+        }
+      }
+    }
+    .mixed {
+      position: absolute;
+      top: 16px;
+      left: -12px;
+      content: url(assets/icons/phone.svg);
+    }
+  }
+}
+
+.desktop:focus {
+  transform: scale(1.03);
+}
+
+.dialog__box {
+  padding: 30px 50px;
+  border-radius: 18px;
+}
+
+.more-feedback__text {
+  max-width: 500px;
+}
+
+.is-close {
+  transform: translateY(40px);
+
+  svg {
+    color: #223344;
+  }
+}
+
+.read-more-btn-comment {
+  font-size: 11px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #333c;
+  cursor: pointer;
+}
+
+.fancybox__content :focus:not(.carousel__button.is-close) {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+  .btn {
+    width: 250px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .btn {
+    height: 42px;
+    width: 200px;
+    font-size: 13px;
+  }
+}

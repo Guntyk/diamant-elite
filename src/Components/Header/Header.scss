@@ -91,12 +91,62 @@
   }
 }
 
+.btn {
+  .phone {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    transform: translateY(-2px) translateX(-30px);
+  }
+
+  .down {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    transform: translateY(-1px) translateX(10px);
+  }
+}
+
+.mobile {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+
+  .phone {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 8px;
+    left: 12px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .headerCalls {
     width: 230px;
   }
   .headerWrapper > li {
     margin-left: 25px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .phone,
+  .down {
+    width: 15px;
+    height: 15px;
+  }
+  .desktop .phone {
+    transform: translateY(0) translateX(-23px);
+  }
+  .desktop .down {
+    transform: translateY(0) translateX(7px);
   }
 }
 

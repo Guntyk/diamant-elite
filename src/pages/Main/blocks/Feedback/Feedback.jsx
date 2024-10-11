@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import cn from 'classnames';
 import { Container } from 'components/Container';
+import { Button } from 'components/Button';
 import styles from 'pages/Main/blocks/Feedback/Feedback.scss';
 
 export const Feedback = () => {
@@ -49,9 +50,9 @@ export const Feedback = () => {
               name='phone'
               placeholder='Номер телефону'
             />
-            <button type='submit' className={styles.button}>
+            <Button type='submit' className={styles.btn}>
               Надіслати
-            </button>
+            </Button>
           </form>
           <div className={styles.text}>
             <h4 className={styles.title}>Зворотній зв'язок</h4>

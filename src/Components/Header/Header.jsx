@@ -1,5 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import cn from 'classnames';
 import { Container } from 'components/Container';
+import { Button } from 'components/Button';
 import arrow from 'assets/icons/arrows/arrow-down.svg';
 import phone from 'assets/icons/phone-white.svg';
 import logo from 'assets/icons/logo/logo.svg';
@@ -12,11 +13,11 @@ export const Header = () => (
         <img src={logo} alt='logo' />
       </a>
       <div className={styles.headerContent}>
-        <button className={styles.buttonDesktop}>
+        <Button className={cn(styles.btn, styles.desktop)}>
           <img src={phone} alt='phone' className={styles.phone} />
           Зателефонувати
           <img src={arrow} alt='down' className={styles.down} />
-        </button>
+        </Button>
         <div className={styles.headerCalls}>
           <ul className={styles.headerWrapper}>
             <li>
@@ -31,9 +32,9 @@ export const Header = () => (
             </li>
           </ul>
         </div>
-        <button data-fancybox data-src='#dialog-content' className={styles.mobile}>
+        <Button className={styles.mobile}>
           <img src={phone} alt='phone' className={styles.phone} />
-        </button>
+        </Button>
       </div>
     </Container>
   </header>
