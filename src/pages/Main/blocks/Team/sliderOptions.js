@@ -13,7 +13,7 @@ export const sliderOptions = {
     loadOnTransitionStart: true,
     loadPrevNext: true,
   },
-  navigation: { nextEl: '#btnNext', prevEl: '#btnPrev', disabledClass: styles.btnDisabled },
+  navigation: { nextEl: '#btnNext', prevEl: '#btnPrev', disabledClass: styles.disabled },
   breakpoints: {
     1200: {
       speed: 1000,

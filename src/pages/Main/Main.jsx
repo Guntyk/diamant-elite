@@ -1,3 +1,4 @@
+import { Testimonials } from 'pages/Main/blocks/Testimonials';
 import { Cooperation } from 'pages/Main/blocks/Cooperation';
 import { Advantages } from 'pages/Main/blocks/Advantages';
 import { Locations } from 'pages/Main/blocks/Locations';
@@ -12,6 +13,7 @@ export const Main = () => (
     <Cooperation />
     <Team />
     <Locations />
+    <Testimonials />
     <Feedback />
   </>
 );

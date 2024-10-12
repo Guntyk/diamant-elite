@@ -1,0 +1,42 @@
+%pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+%bullet {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+
+  &.active {
+    background: #2838a3;
+    pointer-events: none;
+  }
+}
+
+%sliderBtn {
+  width: 4rem;
+  height: 7rem;
+  background: #4a29db;
+  mask: url(assets/icons/chevron-left.svg) no-repeat center / contain;
+
+  &.next {
+    rotate: 180deg;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    pointer-events: none;
+    scale: 0.9;
+  }
+}

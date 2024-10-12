@@ -1,9 +1,10 @@
+import { useEffect, useRef } from 'react';
 import cn from 'classnames';
 import styles from 'components/Modal/Modal.scss';
-import { useEffect, useRef } from 'react';
 
 export const Modal = ({ isOpen, setIsOpen }) => {
   const modalRef = useRef();
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
