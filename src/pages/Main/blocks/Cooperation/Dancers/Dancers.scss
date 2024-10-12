@@ -19,26 +19,32 @@
     transition: 0.3s;
     border-radius: 18px;
     overflow: hidden;
+    transition: 0.3s;
 
     &:nth-child(1) {
       background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-        url(assets/images/dancers/kids.webp) no-repeat 50% / cover border-box;
+        url(assets/images/dancers/kids.webp) no-repeat 50%;
+      background-size: 100%;
     }
     &:nth-child(2) {
       background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-        url(assets/images/dancers/online.webp) no-repeat 50% / cover border-box;
+        url(assets/images/dancers/online.webp) no-repeat 50%;
+      background-size: 100%;
     }
     &:nth-child(3) {
       background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-        url(assets/images/dancers/proamkids.jpg) no-repeat 50% 40% / cover;
+        url(assets/images/dancers/proamkids.jpg) no-repeat 50% 40%;
+      background-size: 100%;
     }
     &:nth-child(4) {
       background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-        url(assets/images/pages/proam-ad/proam-ad2.jpg) no-repeat 50% / cover;
+        url(assets/images/pages/proam-ad/proam-ad2.jpg) no-repeat 50%;
+      background-size: 100%;
     }
     &:nth-child(5) {
       background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-        url(assets/images/dancers/ballroom.jpg) no-repeat 50% 55% / cover border-box;
+        url(assets/images/dancers/ballroom.jpg) no-repeat 50% 55%;
+      background-size: 100%;
       margin-bottom: 30px;
     }
 
@@ -47,12 +53,14 @@
       height: 300px;
     }
 
-    &:hover {
-      transform: scale(1.03);
+    @media (hover: hover) {
+      &:hover {
+        background-size: 105%;
 
-      .dancer__arrow {
-        transform: translateY(0px);
-        opacity: 1;
+        .dancer__arrow {
+          transform: translateY(0px);
+          opacity: 1;
+        }
       }
     }
   }
