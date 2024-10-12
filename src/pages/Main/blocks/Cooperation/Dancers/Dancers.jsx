@@ -8,7 +8,7 @@ export const Dancers = () => {
   return (
     <section className={styles.dancer}>
       <div className={styles.dancer__content}>
-        <Link to='/kids-ballroom-dance' className={styles.dancer__item}>
+        <Link to='/kids-ballroom' className={styles.dancer__item}>
           <h2>
             Бальні танці
             <br />

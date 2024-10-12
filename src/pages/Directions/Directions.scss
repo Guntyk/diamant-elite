@@ -1,13 +1,28 @@
 .hero {
-  @extend %hero;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -7.3rem;
+  width: 100%;
+  height: 100vh;
 }
 
 .title {
-  @extend %title;
+  color: #fff;
+  font-size: 10rem;
+  padding: 0 3rem;
 }
 
 .content {
-  @extend %content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rem;
+  padding-bottom: 20rem;
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+  color: #fff;
 }
 
 .wallpaper {
@@ -27,12 +42,8 @@
     @include wallpaper('assets/images/dancers/proamadults.jpg');
     background-position: 50% 20%;
   }
-  &.BallroomSportDance {
+  &.ballroom {
     @include wallpaper('assets/images/dancers/ballroom.jpg');
     background-position: 50% 70%;
   }
-}
-
-.descr {
-  font-size: 18px;
 }
