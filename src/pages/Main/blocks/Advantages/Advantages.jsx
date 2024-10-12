@@ -1,8 +1,9 @@
+import { Container } from 'components/Container';
 import styles from 'pages/Main/blocks/Advantages/Advantages.scss';
 
 export const Advantages = () => (
-  <article id='advantages' className={styles.advantages}>
-    <div className={styles.container}>
+  <article className={styles.advantages}>
+    <Container>
       <h4 className={styles.title}>Наші переваги</h4>
       <div className={styles.row}>
         <div className={styles.wrapper}>
@@ -34,6 +35,6 @@ export const Advantages = () => (
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   </article>
 );

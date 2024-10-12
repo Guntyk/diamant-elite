@@ -1,0 +1,136 @@
+.team {
+  padding-block: 10rem;
+}
+
+.title {
+  color: #223344;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .teamList {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    height: 43rem;
+    width: 110rem;
+    padding: 2rem 6rem 5rem;
+    margin-top: 3rem;
+  }
+
+  .employee {
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    perspective: 100rem;
+
+    @media (hover: hover) {
+      &:hover .card {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.bullet {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+
+  &.active {
+    background: #2838a3;
+    pointer-events: none;
+  }
+}
+
+.btn {
+  width: 4rem;
+  height: 7rem;
+  background: #4a29db;
+  mask: url(assets/icons/chevron-left.svg) no-repeat center / contain;
+
+  &.next {
+    rotate: 180deg;
+  }
+
+  &Disabled {
+    opacity: 0.5;
+    filter: grayscale(1);
+    pointer-events: none;
+    scale: 0.9;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .slider {
+    gap: 1rem;
+
+    .teamList {
+      padding-inline: 0;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .slider .teamList {
+    width: 80%;
+  }
+
+  .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .team {
+    padding-block: 7rem 10rem;
+  }
+
+  .slider .teamList {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .team {
+    padding-block: 5rem 7rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .slider {
+    margin-inline: -1.5rem;
+
+    .teamList {
+      margin-top: 0;
+      padding-inline: 1.5rem;
+      padding-bottom: 3rem;
+      height: 31rem;
+    }
+    .employee {
+      font-size: 1.2rem;
+    }
+  }
+}

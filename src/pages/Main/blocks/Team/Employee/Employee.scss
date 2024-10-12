@@ -1,0 +1,92 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+
+  &Front,
+  &Back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.5rem;
+    background: #2838a3;
+  }
+
+  &Front {
+    padding: 2rem 1.1rem;
+    background: linear-gradient(45deg, #3f2b96 10%, #3d6ee9);
+  }
+
+  &Back {
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    transform: rotateY(180deg);
+    background: linear-gradient(-45deg, #3f2b96 10%, #3d6ee9);
+  }
+
+  &Flipped {
+    transform: rotateY(180deg);
+  }
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-block: 1rem 0.5rem;
+}
+
+.photo {
+  height: 20rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+
+  img {
+    width: 100%;
+    height: 120%;
+    object-fit: contain;
+  }
+}
+
+.biography {
+  height: 100%;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.social {
+  width: 100%;
+
+  &Link {
+    height: 3rem;
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .photo {
+    height: 12rem;
+  }
+
+  .name {
+    margin-block: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .cardBack {
+    padding: 2rem 1.5rem;
+  }
+}
