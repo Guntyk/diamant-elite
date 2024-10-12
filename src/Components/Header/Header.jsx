@@ -11,7 +11,7 @@ export const Header = () => (
       <Link to='/'>
         <img className={styles.logo} src={logo} alt='logo' />
       </Link>
-      <Button className={styles.btn}>
+      <Button className={styles.btn} phoneBtn>
         <img src={phone} alt='phone' className={styles.phone} />
         <span>Зателефонувати</span>
       </Button>
