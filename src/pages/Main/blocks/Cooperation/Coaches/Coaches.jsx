@@ -1,4 +1,4 @@
-import cn from 'classnames';
+import { Button } from 'components/Button';
 import kids from 'assets/images/trainers/trainers.webp';
 import styles from 'pages/Main/blocks/Cooperation/Coaches/Coaches.scss';
 
@@ -9,7 +9,7 @@ export const Coaches = () => (
       <div className={styles.trainer__wrapper}>
         <h4 className={styles.title}>Запрошуємо вас до співпраці</h4>
         <p className={styles.subtitle}>Проводьте групові та індивідуальні заняття в наших залах</p>
-        <button className={cn(styles.button, styles.button__mt30)}>Зателефонувати</button>
+        <Button className={styles.btn}>Зателефонувати</Button>
       </div>
     </div>
   </section>
