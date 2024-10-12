@@ -1,0 +1,38 @@
+.hero {
+  @extend %hero;
+}
+
+.title {
+  @extend %title;
+}
+
+.content {
+  @extend %content;
+}
+
+.wallpaper {
+  &.kids {
+    @include wallpaper('assets/images/dancers/kids.webp');
+    background-position: 50% 0%;
+  }
+  &.online {
+    @include wallpaper('assets/images/dancers/online.webp');
+    background-position: 50% 50%;
+  }
+  &.proAmKids {
+    @include wallpaper('assets/images/dancers/proamkids.jpg');
+    background-position: 50% 35%;
+  }
+  &.proAmAdults {
+    @include wallpaper('assets/images/dancers/proamadults.jpg');
+    background-position: 50% 20%;
+  }
+  &.BallroomSportDance {
+    @include wallpaper('assets/images/dancers/ballroom.jpg');
+    background-position: 50% 70%;
+  }
+}
+
+.descr {
+  font-size: 18px;
+}

@@ -1,0 +1,26 @@
+%hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -73px;
+  width: 100%;
+  height: 100vh;
+}
+
+%content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 200px 30px;
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+  color: #fff;
+}
+
+%title {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 400;
+  padding: 0 30px;
+}
