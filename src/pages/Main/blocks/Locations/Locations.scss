@@ -41,16 +41,20 @@
 
 @media (max-width: 991.98px) {
   .wrapper {
-    padding-top: 4rem;
     flex-wrap: wrap;
   }
+
   .listBlock {
-    margin: 0 auto 30px auto;
+    margin: 0 auto;
+    margin-bottom: 3rem;
     text-align: center;
   }
+
   .map {
+    width: 100%;
     margin: 0 auto;
   }
+
   .list {
     list-style-type: none;
     margin-left: 0;
@@ -65,17 +69,21 @@
 }
 
 @media (max-width: 575.98px) {
-  .wrapper {
-    padding-top: 0;
-  }
   .title {
     font-size: 30px;
   }
+
   .list {
     margin-top: 5px;
   }
+
   .listBlock {
     margin: 0 auto 30px auto;
     text-align: center;
+  }
+
+  .map {
+    width: calc(100% + 1.5rem * 2);
+    margin-inline: -1.5rem;
   }
 }
