@@ -23,8 +23,10 @@
   a {
     color: #fff;
 
-    &:hover {
-      text-decoration: underline;
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -58,8 +60,10 @@
     display: inline;
   }
 
-  a:hover {
-    text-decoration: underline;
+  @media (hover: hover) {
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 

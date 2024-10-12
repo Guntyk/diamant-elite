@@ -34,8 +34,11 @@
   .href {
     font-weight: 500;
     cursor: pointer;
-    &:hover {
-      text-decoration: underline;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   &__reasons {
@@ -80,8 +83,11 @@
   transition: 0.2s;
   font-size: 14px;
   padding: 5px 10px;
-  &:hover {
-    transform: scale(1.02);
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
 .details1 {
@@ -98,8 +104,11 @@
   transition: 0.2s;
   font-size: 14px;
   padding: 5px 10px;
-  &:hover {
-    transform: scale(1.02);
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }
 

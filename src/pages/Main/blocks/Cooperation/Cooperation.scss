@@ -21,8 +21,10 @@
 .item {
   cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &.active {
