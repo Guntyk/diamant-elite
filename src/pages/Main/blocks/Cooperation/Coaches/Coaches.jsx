@@ -9,7 +9,9 @@ export const Coaches = () => (
       <div className={styles.trainer__wrapper}>
         <h4 className={styles.title}>Запрошуємо вас до співпраці</h4>
         <p className={styles.subtitle}>Проводьте групові та індивідуальні заняття в наших залах</p>
-        <Button className={styles.btn}>Зателефонувати</Button>
+        <Button className={styles.btn} phoneBtn>
+          Зателефонувати
+        </Button>
       </div>
     </div>
   </section>

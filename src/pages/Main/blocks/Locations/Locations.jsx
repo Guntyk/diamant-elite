@@ -22,7 +22,9 @@ export const Locations = () => {
                 </li>
               ))}
             </ul>
-            <Button className={styles.btn}>Зателефонувати</Button>
+            <Button className={styles.btn} phoneBtn>
+              Зателефонувати
+            </Button>
           </section>
           <iframe
             src={activeMap.map}
