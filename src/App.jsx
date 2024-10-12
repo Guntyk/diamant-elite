@@ -1,32 +1,21 @@
-import { Switch, Route } from 'react-router-dom/cjs/react-router-dom.min';
+import { Switch, Route } from 'react-router-dom';
 import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
-import { Cooperation } from 'pages/Main/blocks/Cooperation';
-import { Advantages } from 'pages/Main/blocks/Advantages';
-import { Locations } from 'pages/Main/blocks/Locations';
-import { Feedback } from 'pages/Main/blocks/Feedback';
-import { Hero } from 'pages/Main/blocks/Hero';
+import { BallroomSportDance } from 'pages/Directions/BallroomSportDance';
 import { KidsBallroom } from 'pages/Directions/KidsBallroom';
 import { OnlineLearn } from 'pages/Directions/OnlineLearn';
-import { ProAmKids } from 'pages/Directions/ProAmKids';
 import { ProAmAdults } from 'pages/Directions/ProAmAdults';
-import { BallroomSportDance } from 'pages/Directions/BallroomSportDance';
-import { Team } from 'pages/Main/blocks/Team';
+import { ProAmKids } from 'pages/Directions/ProAmKids';
+import { Main } from 'pages/Main';
 
 export default function App() {
   return (
     <>
-      {' '}
       <Header />
       <main>
         <Switch>
           <Route path='/' exact>
-            <Hero />
-            <Advantages />
-            <Cooperation />
-            <Team />
-            <Locations />
-            <Feedback />
+            <Main />
           </Route>
           <Route path='/kids-ballroom-dance' exact>
             <KidsBallroom />
