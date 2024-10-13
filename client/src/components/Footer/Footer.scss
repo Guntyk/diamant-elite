@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(45deg, #3f2b96 10%, #3d6ee9);
+  background: $primaryGradient;
 }
 
 .wrapper {
@@ -21,7 +21,7 @@
   line-height: 20px;
 
   a {
-    color: #fff;
+    color: $white;
 
     @media (hover: hover) {
       &:hover {
@@ -41,9 +41,9 @@
 
 .aside {
   height: 50px;
-  color: #fff;
+  color: $white;
   font-size: 1.6rem;
-  background-color: #2b3cac;
+  background-color: $blue2;
 
   .container {
     height: 100%;

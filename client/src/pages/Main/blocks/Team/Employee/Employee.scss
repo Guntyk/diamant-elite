@@ -16,19 +16,19 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 1.5rem;
-    background: #2838a3;
+    background: $blue;
   }
 
   &Front {
     padding: 2rem 1.1rem;
-    background: linear-gradient(45deg, #3f2b96 10%, #3d6ee9);
+    background: $primaryGradient;
   }
 
   &Back {
     justify-content: space-between;
     padding: 3rem 2rem;
     transform: rotateY(180deg);
-    background: linear-gradient(-45deg, #3f2b96 10%, #3d6ee9);
+    background: $primaryGradient;
   }
 
   &Flipped {
@@ -47,7 +47,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
-  background: #fff;
+  background: $white;
 
   img {
     width: 100%;

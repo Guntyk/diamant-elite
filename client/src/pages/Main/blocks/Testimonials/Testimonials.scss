@@ -1,6 +1,6 @@
 .feedback {
   padding-block: 5rem 7rem;
-  color: #223344;
+  color: $gray;
 }
 
 .title {
@@ -39,7 +39,7 @@
   width: 20rem;
   height: 20rem;
   aspect-ratio: 1;
-  border: 0.2rem solid #dbdbdb;
+  border: 0.2rem solid $white2;
   border-radius: 50%;
   overflow: hidden;
   object-fit: cover;
@@ -81,7 +81,7 @@
 
 .moreBtn {
   width: min-content;
-  color: #333c;
+  color: $gray;
   font-size: 1.3rem;
 }
 

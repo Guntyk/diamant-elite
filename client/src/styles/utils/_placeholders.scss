@@ -14,11 +14,11 @@
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 50%;
-  background: #ccc;
+  background: $white2;
   cursor: pointer;
 
   &.active {
-    background: #2838a3;
+    background: $blue1;
     pointer-events: none;
   }
 }
@@ -26,7 +26,7 @@
 %sliderBtn {
   width: 4rem;
   height: 7rem;
-  background: #4a29db;
+  background: $blue2;
   mask: url(assets/icons/chevron-left.svg) no-repeat center / contain;
 
   &.next {

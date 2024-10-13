@@ -1,9 +1,9 @@
 .btn {
   width: 27.1rem;
   height: 5.2rem;
-  background: linear-gradient(45deg, #3f2b96, #3d6ee9, #3f2b96);
+  background: $loopedGradient;
   background-size: 200%;
-  color: #fff;
+  color: $white;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 2rem;

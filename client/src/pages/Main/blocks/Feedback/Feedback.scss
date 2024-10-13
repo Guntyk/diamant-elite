@@ -1,7 +1,7 @@
 .form {
   padding-top: 125px;
   height: 480px;
-  background-color: #f8f8f8;
+  background-color: $white1;
 
   form {
     display: flex;
@@ -17,8 +17,8 @@
   border-radius: 18px;
   border: none;
   outline: none;
-  background-color: #dfdfdf;
-  color: #fff;
+  background-color: $white2;
+  color: $white;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -29,14 +29,14 @@
   }
 
   &::placeholder {
-    color: #fff;
+    color: $white;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
   }
 
   &:focus {
-    background-color: #a392ff;
+    background-color: $lavender;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.14);
   }
 }
@@ -47,7 +47,7 @@
 }
 
 .title {
-  color: #223344;
+  color: $gray;
   font-weight: 700;
   font-size: 40px;
   line-height: 49px;
@@ -55,7 +55,7 @@
 
 .subtitle {
   margin-top: 14px;
-  color: #223344;
+  color: $gray;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;

@@ -1,20 +1,19 @@
-$hue: 236;
+$hue: 232;
 
-$white1: hsl(0, 0%, 97%); // #F8F8F8
-$white2: rgb(255, 255, 255); //#fff
-$white3: hsl(0, 0%, 93%); // #eeeeee
-$white4: hsl(0, 0%, 75%); // #bebebe
-$white5: hsl(0, 0%, 87%); // #DFDFDF
-$white6: hsl(0, 0%, 86%); // #dbdbdb
+$blue: hsl($hue, 57%, 35%); // #26348B
+$blue1: hsl(calc($hue - 9), 80%, 58%); // #3d6ee9
+$blue2: hsl($hue, 60%, 42%); // #2b3cac
+$blue3: hsl($hue, 60%, 42%); // #2838a3
 
-$purple1: hsl(272, 76%, 53%); // #8E2DE2
-$purple2: hsl(272, 65%, 48%); // #7f2ac9
-$purple3: hsl(249, 49%, 35%); //#3B2E85
-$purple4: hsl(249, 100%, 79%); // #A392FF
-$purple5: hsl(272, 76%, 53%); // #8e2de2
-$purple: hsl(299, 67%, 49%); // #ce29d1
+$gray: hsl(calc($hue - 22), 33%, 20%); // #223344
+$lavender: hsl(calc($hue + 17), 100%, 79%); // #a392ff
+$purple: hsl(calc($hue + 19), 55%, 38%); //#3f2b96
+$lime: hsl(calc($hue - 152), 75%, 57%); // #ace440
+$black: hsl(calc($hue - 232), 0%, 0%); // #000
 
-$blue1: hsl(210, 33%, 20%); // #223344
-$blue2: hsl(260, 100%, 44%); // #4a00e0
+$white: hsl(calc($hue - 232), 0%, 100%); // #fff
+$white1: hsl(calc($hue - 232), 0%, 97%); // #f8f8f8
+$white2: hsl(calc($hue - 232), 0%, 86%); // #dbdbdb
 
-$green1: hsl(80, 75%, 57%); // #ACE440
+$primaryGradient: linear-gradient(45deg, $purple 10%, $blue1);
+$loopedGradient: linear-gradient(45deg, $purple, $blue1, $purple);
