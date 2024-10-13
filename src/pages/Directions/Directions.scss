@@ -27,23 +27,23 @@
 
 .wallpaper {
   &.kids {
-    @include wallpaper('assets/images/dancers/kids.webp');
+    @include wallpaper('assets/images/directions/kids.webp');
     background-position: 50% 0%;
   }
   &.online {
-    @include wallpaper('assets/images/dancers/online.webp');
+    @include wallpaper('assets/images/directions/online.webp');
     background-position: 50% 50%;
   }
   &.proAmKids {
-    @include wallpaper('assets/images/dancers/proamkids.jpg');
+    @include wallpaper('assets/images/directions/proamkids.jpg');
     background-position: 50% 35%;
   }
   &.proAmAdults {
-    @include wallpaper('assets/images/dancers/proamadults.jpg');
+    @include wallpaper('assets/images/directions/proamadults.jpg');
     background-position: 50% 20%;
   }
   &.ballroom {
-    @include wallpaper('assets/images/dancers/ballroom.jpg');
+    @include wallpaper('assets/images/directions/ballroom.jpg');
     background-position: 50% 70%;
   }
 }

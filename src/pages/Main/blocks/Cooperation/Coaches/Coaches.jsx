@@ -1,5 +1,5 @@
 import { Button } from 'components/Button';
-import kids from 'assets/images/trainers/trainers.webp';
+import kids from 'assets/images/kids.webp';
 import styles from 'pages/Main/blocks/Cooperation/Coaches/Coaches.scss';
 
 export const Coaches = () => (
