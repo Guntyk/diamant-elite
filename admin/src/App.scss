@@ -1,3 +1,7 @@
+.app {
+  display: flex;
+}
+
 .warning {
   display: none;
   flex-direction: column;
@@ -12,6 +16,10 @@
   span {
     font-size: 10rem;
   }
+}
+
+.pages {
+  width: 100%;
 }
 
 .text {
