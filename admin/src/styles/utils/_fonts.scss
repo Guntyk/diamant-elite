@@ -1,0 +1,23 @@
+@font-face {
+  font-family: $font;
+  src: url('assets/fonts/e-Ukraine-Light.otf');
+  font-weight: map-get($fontWeights, 'light');
+}
+
+@font-face {
+  font-family: $font;
+  src: url('assets/fonts/e-Ukraine-Regular.otf');
+  font-weight: map-get($fontWeights, 'regular');
+}
+
+@font-face {
+  font-family: $font;
+  src: url('assets/fonts/e-Ukraine-Medium.otf');
+  font-weight: map-get($fontWeights, 'medium');
+}
+
+@font-face {
+  font-family: $font;
+  src: url('assets/fonts/e-Ukraine-Bold.otf');
+  font-weight: map-get($fontWeights, 'bold');
+}
