@@ -18,7 +18,7 @@ export const Sidebar = ({ setHeaderTitle }) => {
             <li className={styles.navigationItem} key={id}>
               <Link
                 to={route}
-                className={cn(styles.link, { [styles.active]: pathname === route })}
+                className={cn(styles.link, { [styles.active]: pathname.includes(route) })}
                 onClick={() => setHeaderTitle(title)}
               >
                 <span style={{ mask: `url(${icon})` }} className={styles.icon} />

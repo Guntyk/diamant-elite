@@ -1,6 +1,8 @@
+import { Route, Switch } from 'react-router-dom';
 import { useState } from 'react';
 import { Header } from 'components/Header/Header';
 import { Sidebar } from 'components/Sidebar';
+import { Website } from 'pages/Website';
 import styles from 'App.scss';
 
 export default function App() {
@@ -12,6 +14,11 @@ export default function App() {
         <Sidebar setHeaderTitle={setHeaderTitle} />
         <div className={styles.pages}>
           <Header title={headerTitle} />
+          <Switch>
+            <Route path='/website'>
+              <Website />
+            </Route>
+          </Switch>
         </div>
       </div>
 

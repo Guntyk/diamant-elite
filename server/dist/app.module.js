@@ -10,6 +10,7 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const users_module_1 = require("./users/users.module");
 const config_1 = require("@nestjs/config");
+const employees_module_1 = require("./employees/employees.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -20,6 +21,7 @@ exports.AppModule = AppModule = __decorate([
                 isGlobal: true,
             }),
             users_module_1.UsersModule,
+            employees_module_1.EmployeesModule,
         ],
     })
 ], AppModule);

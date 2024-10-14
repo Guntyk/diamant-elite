@@ -1,0 +1,41 @@
+.page {
+  max-height: calc(100vh - 14rem);
+  overflow: hidden;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: $gray;
+  font-size: 1.6rem;
+  transition: 0.2s;
+
+  &.active {
+    color: $black;
+    pointer-events: none;
+
+    .number {
+      border-color: $black;
+    }
+  }
+}
+
+.number {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  margin-right: 0.5rem;
+  aspect-ratio: 1;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-radius: 50%;
+  border: 0.1rem solid $gray;
+}
