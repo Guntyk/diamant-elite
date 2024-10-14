@@ -8,7 +8,6 @@ export class UsersService {
 
   findAll() {
     return this.prisma.user.findMany();
-    //   {
     //     name: 'Leanne Graham',
     //     email: 'Sincere@april.biz',
     //     role: 'admin',

@@ -14,8 +14,12 @@
 /admin/build
 /client/build
 /server/build
+/server/dist
 
 # misc
+/admin/.env
+/client/.env
+/server/.env
 .DS_Store
 .env.local
 .env.development.local
