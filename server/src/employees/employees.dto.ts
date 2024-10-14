@@ -1,5 +1,5 @@
 import { PartialType } from '@nestjs/mapped-types';
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
 
 export class CreateEmployeesDto {
   @IsNotEmpty()
@@ -14,6 +14,7 @@ export class CreateEmployeesDto {
   @IsString()
   job: string;
 
+  @IsOptional()
   @IsString()
   workplace: string;
 
