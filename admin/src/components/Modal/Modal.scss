@@ -1,0 +1,39 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+
+  &.active {
+    opacity: 0.3;
+    pointer-events: all;
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 5rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  max-height: 95dvh;
+  overflow-x: hidden;
+  translate: -50% -50%;
+  pointer-events: none;
+  border-radius: 2rem;
+  background: $white;
+  transition: 0.3s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

@@ -62,6 +62,7 @@
   justify-content: end;
 }
 
+.addBtn,
 .createBtn,
 .deleteBtn {
   border-radius: 0.8rem;
@@ -72,6 +73,7 @@
   }
 }
 
+.addBtn,
 .createBtn {
   padding: 1rem 4rem;
   background: $blue;
@@ -90,4 +92,25 @@
   &:hover {
     color: red;
   }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input {
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid $gray;
+
+  &::placeholder {
+    font-weight: 300;
+  }
+}
+
+.addBtn {
+  margin-top: 2rem;
 }

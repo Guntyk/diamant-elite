@@ -152,13 +152,15 @@ hr {
   margin: 0;
 }
 
+textarea,
 input {
   border: 0;
   border-radius: 0;
-  font-size: inherit;
-}
+  font: inherit;
+  min-height: fit-content;
+  resize: vertical;
 
-textarea:focus-visible,
-input:focus-visible {
-  outline: none;
+  &:focus-visible {
+    outline: none;
+  }
 }

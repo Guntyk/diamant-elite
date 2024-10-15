@@ -2,6 +2,16 @@ import { backendApi } from 'api/api';
 import APIErrorsHandlingUtils from 'utils/APIErrorsHandlingUtils';
 
 export default class TeamService {
+  static async createEmployee(newEmployeeData) {
+    const [error, data] = await backendApi.post('/employees', newEmployeeData);
+
+    if (error) {
+      return { result: null, error: APIErrorsHandlingUtils.handleErrors(error) };
+    }
+
+    return { result: data, error: null };
+  }
+
   static async getTeam() {
     const [error, data] = await backendApi.get('/employees');
 

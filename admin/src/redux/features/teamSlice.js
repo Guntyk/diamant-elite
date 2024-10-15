@@ -7,6 +7,16 @@ const initialState = {
   isLoading: false,
 };
 
+export const createEmployee = createAsyncThunk('team/createEmployee', async (newEmployeeData, { rejectWithValue }) => {
+  const { result, error } = await TeamService.createEmployee(newEmployeeData);
+
+  if (result) {
+    return result;
+  }
+
+  return rejectWithValue(error || 'Під час додавання нового працівників сталася помилка. Спробуйте пізніше');
+});
+
 export const getTeam = createAsyncThunk('team/getTeam', async (_, { rejectWithValue }) => {
   const { result, error } = await TeamService.getTeam();
 
@@ -31,6 +41,20 @@ const teamSlice = createSlice({
   name: 'team',
   initialState,
   extraReducers: (builder) => {
+    builder
+      .addCase(createEmployee.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(createEmployee.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.team = [action.payload, ...state.team];
+        state.error = null;
+      })
+      .addCase(createEmployee.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
     builder
       .addCase(getTeam.pending, (state) => {
         state.isLoading = true;
