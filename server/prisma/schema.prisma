@@ -33,6 +33,17 @@ model Employee {
   updatedAt DateTime @updatedAt
 }
 
+model Location {
+  id Int @id @default(autoincrement())
+
+  name    String
+  address String
+  map     String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 enum Role {
   COACH
   DANCER

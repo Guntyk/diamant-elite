@@ -1,6 +1,7 @@
 import queryString from 'query-string';
 import cn from 'classnames';
 import { useLocation, useHistory } from 'react-router-dom';
+import { Locations } from 'pages/Website/content/Locations';
 import { Team } from 'pages/Website/content/Team';
 import styles from 'pages/Website/Website.scss';
 
@@ -11,7 +12,7 @@ export const Website = () => {
 
   const websiteContentPages = [
     { id: 1, title: 'Команда', key: 'team', component: <Team /> },
-    { id: 2, title: 'Локації', key: 'locations' },
+    { id: 2, title: 'Локації', key: 'locations', component: <Locations /> },
     { id: 3, title: 'Відгуки', key: 'testimonials' },
   ];
 

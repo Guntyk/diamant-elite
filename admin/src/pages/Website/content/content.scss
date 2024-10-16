@@ -1,4 +1,4 @@
-.team {
+.content {
   margin-right: 4rem;
   padding: 3rem;
   border-radius: 2rem;
@@ -8,6 +8,33 @@
   font-size: 1.6rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   overflow-x: hidden;
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &Item {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+    white-space: nowrap;
+    height: 6rem;
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.employee {
+      grid-template-columns: 0.3fr 1fr 1.5fr 0.9fr 2fr 1fr;
+    }
+    &.location {
+      grid-template-columns: 0.75fr 1fr 2fr 1fr;
+    }
+  }
 }
 
 .header {
@@ -20,26 +47,6 @@
   margin-bottom: 2rem;
   font-size: 2.4rem;
   text-align: left;
-}
-
-.teamList {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.employee {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr 1.5fr 0.9fr 2fr 1fr;
-  width: 100%;
-  align-items: center;
-  gap: 2rem;
-  white-space: nowrap;
-
-  p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 }
 
 .photo {
