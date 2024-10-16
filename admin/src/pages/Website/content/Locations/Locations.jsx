@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createLocation, getLocations, updateLocation, deleteLocation } from '@redux/features/locationsSlice';
 import { useEffect, useState } from 'react';
 import cn from 'classnames';
+import { ErrorMessage } from 'components/ErrorMessage';
 import { Modal } from 'components/Modal';
 import styles from 'pages/Website/content/content.scss';
 
@@ -115,7 +116,7 @@ export const Locations = () => {
           </button>
         </form>
       </Modal>
-      {error && <p>{error}</p>}
+      {error && <ErrorMessage errorText={error} />}
     </section>
   );
 };

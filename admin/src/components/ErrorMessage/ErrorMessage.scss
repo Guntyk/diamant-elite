@@ -1,0 +1,15 @@
+.error {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: $red;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    mask: url(assets/icons/alert.svg);
+    background: $red;
+  }
+}

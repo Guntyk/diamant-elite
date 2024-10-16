@@ -2,6 +2,7 @@ import { createEmployee, getTeam, deleteEmployee } from '@redux/features/teamSli
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import cn from 'classnames';
+import { ErrorMessage } from 'components/ErrorMessage';
 import { Modal } from 'components/Modal';
 import styles from 'pages/Website/content/content.scss';
 
@@ -80,7 +81,7 @@ export const Team = () => {
           </button>
         </form>
       </Modal>
-      {error && <p>{error}</p>}
+      {error && <ErrorMessage errorText={error} />}
     </section>
   );
 };
