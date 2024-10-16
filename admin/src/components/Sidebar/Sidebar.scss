@@ -46,7 +46,7 @@
   transition: 0.2s;
 
   &:hover {
-    background: $black;
+    background: $blue;
 
     .icon {
       background: $white;
@@ -62,10 +62,10 @@
 
   &.active {
     pointer-events: none;
-    background: $black;
+    background: $blue;
 
     .icon {
-      background: $lime;
+      background: $lightBlue;
     }
   }
 }

@@ -8,13 +8,13 @@ import styles from 'pages/Website/Website.scss';
 export const Website = () => {
   const { search } = useLocation();
   const { push } = useHistory();
-  const contentType = queryString.parse(search).content || 'team';
 
   const websiteContentPages = [
     { id: 1, title: 'Команда', key: 'team', component: <Team /> },
     { id: 2, title: 'Локації', key: 'locations', component: <Locations /> },
-    { id: 3, title: 'Відгуки', key: 'testimonials' },
   ];
+
+  const contentType = queryString.parse(search).content || websiteContentPages[0].key;
 
   return (
     <section className={styles.page}>

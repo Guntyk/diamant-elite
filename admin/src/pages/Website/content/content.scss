@@ -24,10 +24,12 @@
     height: 6rem;
 
     p {
+      width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       padding: 0.5rem 1rem;
       border: 0.1rem solid transparent;
+      cursor: text;
     }
 
     &.employee {
