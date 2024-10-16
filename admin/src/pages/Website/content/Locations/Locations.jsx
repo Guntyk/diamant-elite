@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getLocations, createLocation, deleteLocation } from '@redux/features/locationsSlice';
+import { createLocation, getLocations, updateLocation, deleteLocation } from '@redux/features/locationsSlice';
 import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import { Modal } from 'components/Modal';
@@ -32,8 +32,47 @@ export const Locations = () => {
     setIsCreateModalOpen(false);
   };
 
+  const handleUpdate = (id, field, value, previousValue) => {
+    const updatedLocationData = {
+      [field]: value,
+    };
+
+    dispatch(updateLocation({ id, updatedLocationData }))
+      .unwrap()
+      .catch(() => {
+        document.getElementById(`${field}-${id}`).textContent = previousValue;
+      });
+  };
+
   const handleDelete = (id) => {
     dispatch(deleteLocation(id));
+  };
+
+  const handleEdit = (id, field, previousValue) => {
+    const element = document.getElementById(`${field}-${id}`);
+    const input = document.createElement('input');
+    input.value = element.textContent;
+    input.className = styles.inputInline;
+    element.replaceWith(input);
+
+    input.focus();
+
+    input.addEventListener('blur', () => {
+      const newValue = input.value.trim();
+      if (newValue && newValue !== previousValue) {
+        handleUpdate(id, field, newValue, previousValue);
+        input.replaceWith(element);
+      } else {
+        input.replaceWith(element);
+        element.textContent = previousValue;
+      }
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        input.blur();
+      }
+    });
   };
 
   return (
@@ -48,9 +87,15 @@ export const Locations = () => {
       <ul className={styles.contentList}>
         {locations.map(({ id, name, address, map }) => (
           <li className={cn(styles.contentItem, styles.location)} key={id}>
-            <p>{name}</p>
-            <p>{address}</p>
-            <p>{map}</p>
+            <p id={`name-${id}`} onClick={() => handleEdit(id, 'name', name)}>
+              {name}
+            </p>
+            <p id={`address-${id}`} onClick={() => handleEdit(id, 'address', address)}>
+              {address}
+            </p>
+            <p id={`map-${id}`} onClick={() => handleEdit(id, 'map', map)}>
+              {map}
+            </p>
             <div className={styles.buttons}>
               <button className={styles.deleteBtn} onClick={() => handleDelete(id)}>
                 Видалити

@@ -26,6 +26,8 @@
     p {
       overflow: hidden;
       text-overflow: ellipsis;
+      padding: 0.5rem 1rem;
+      border: 0.1rem solid transparent;
     }
 
     &.employee {
@@ -120,4 +122,11 @@
 
 .addBtn {
   margin-top: 2rem;
+}
+
+.inputInline {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid $gray;
+  border-radius: 0.8rem;
 }

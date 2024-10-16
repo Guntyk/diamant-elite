@@ -30,11 +30,24 @@ export const getLocations = createAsyncThunk('locations/getLocations', async (_,
   return rejectWithValue(error || 'Під час отримання даних локацій сталася помилка. Спробуйте пізніше');
 });
 
+export const updateLocation = createAsyncThunk(
+  'locations/updateLocation',
+  async ({ id, updatedLocationData }, { rejectWithValue }) => {
+    const { result, error } = await LocationsService.updateLocation(id, updatedLocationData);
+
+    if (result) {
+      return { id, updatedLocationData: result };
+    }
+
+    return rejectWithValue(error || 'Під час отримання даних локацій сталася помилка. Спробуйте пізніше');
+  }
+);
+
 export const deleteLocation = createAsyncThunk('locations/deleteLocation', async (id, { rejectWithValue }) => {
   const { result, error } = await LocationsService.deleteLocation(id);
 
   if (result) {
-    return result;
+    return { id };
   }
 
   return rejectWithValue(error || 'Під час видалення локації сталася помилка. Спробуйте пізніше');
@@ -57,8 +70,7 @@ const locationsSlice = createSlice({
       .addCase(createLocation.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
-      });
-    builder
+      })
       .addCase(getLocations.pending, (state) => {
         state.isLoading = true;
         state.error = null;
@@ -71,6 +83,22 @@ const locationsSlice = createSlice({
       .addCase(getLocations.rejected, (state, action) => {
         state.isLoading = false;
         state.locations = [];
+        state.error = action.payload;
+      })
+      .addCase(updateLocation.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(updateLocation.fulfilled, (state, action) => {
+        state.isLoading = false;
+        const { id, updatedLocationData } = action.payload;
+        state.locations = state.locations.map((location) =>
+          location.id === id ? { ...location, ...updatedLocationData } : location
+        );
+        state.error = null;
+      })
+      .addCase(updateLocation.rejected, (state, action) => {
+        state.isLoading = false;
         state.error = action.payload;
       })
       .addCase(deleteLocation.pending, (state) => {
